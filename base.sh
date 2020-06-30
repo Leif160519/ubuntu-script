@@ -56,6 +56,11 @@ echo -e "\033[1;32m  安装expect \033[0m"
 apt-get -y install expect
 echo -e "\033[1;32m  安装ntpdate \033[0m"
 apt-get -y install ntpdate
+echo -e "\033[1;32m  安装w3m \033[0m"
+apt-get -y install w3m
+echo -e "\033[1;32m  安装lynx \033[0m"
+apt-get -y install lynx
+
 
 # 设置SSH
 echo -e '\033[1;31m 关闭SSH DNS反向解析和GSSAPI的用户认证 \033[0m'
