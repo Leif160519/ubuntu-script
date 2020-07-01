@@ -60,7 +60,8 @@ echo -e "\033[1;32m  安装w3m \033[0m"
 apt-get -y install w3m
 echo -e "\033[1;32m  安装lynx \033[0m"
 apt-get -y install lynx
-
+echo -e "\033[1;32m  安装ansible \033[0m"
+apt-get -y install ansible
 
 # 设置SSH
 echo -e '\033[1;31m 关闭SSH DNS反向解析和GSSAPI的用户认证 \033[0m'
