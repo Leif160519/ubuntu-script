@@ -1,5 +1,6 @@
 #!/bin/bash
 # 更换阿里源
+echo -e "\033[1;31m  更换阿里源 \033[0m"
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 cat <<EOF > /etc/apt/sources.list
 deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
@@ -22,6 +23,7 @@ EOF
 apt-get -y update
 apt-get -y upgrade
 
+echo -e "\033[1;31m  安装常用软件 \033[0m"
 echo -e "\033[1;32m  安装openssh-server \033[0m"
 apt-get -y install openssh-server 
 echo -e "\033[1;32m  安装tree \033[0m"
@@ -82,7 +84,7 @@ sed -i "s/enabled=1/enabled=0/g" /etc/default/apport
 # 关闭swap分区
 echo -e '\033[1;31m 永久关闭swap分区（重启后生效） \033[0m'
 #swapoff -a 临时关闭
-sed -i "s/\/swapfile/#\/swapfile/g" /etc/fstab 
+sed  -i '/swap/s/^/#/' /etc/fstab
 
 
 echo -e '\033[1;32m 系统初始化配置完成！\033[0m'

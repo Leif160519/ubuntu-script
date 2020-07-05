@@ -6,28 +6,29 @@ mkdir -p ${share_dir}
 chmod -R 777 ${share_dir}
 echo -n "请输入共享的名称（别名）："
 read share_name
-echo -n "添加samba用户名："
-read smb_user
-smbpasswd -a ${smb_user}
+echo "请设置共享的root密码"
+smbpasswd -a root
 
 # 添加共享目录
 cat <<EOF >> /etc/samba/smb.conf
 [${share_name}]
    comment = ${share_name}
-   browseable = yes
    path = ${share_dir}
-   create mask = 0700
-   directory mask = 0700
-   valid users = ${smb_user}
-   force user = ${smb_user}
-   force group = ${smb_user}
-   public = yes
-   available = yes
-   writable = yes
+   browseable = yes
+   writeable = yes
+   guest ok = yes
+   read only = no
+   valid user = root
 EOF
+
 # 重启samba
 systemctl restart smbd
 # 设置samba开机自启动
 systemctl enable smbd
+
+browser_url="file://ip/${share_name}/"
+windows_url="\\\ip\${share_name}"
+
+echo "浏览器通过\"${browser_url}\",windows通过\"${windows_url}\"访问"
 
 exit

@@ -15,4 +15,9 @@ systemctl restart nfs-kernel-server
 # 设置nfs开机自启动
 systemctl enable nfs-kernel-server
 
+browser_url="file://ip${share_dir}"
+windows_url="\\\ip\${share_dir}"
+
+echo "浏览器通过\"${browser_url}\",windows通过\"${windows_url}\"访问"
+
 exit
