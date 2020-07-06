@@ -3,7 +3,7 @@ echo "查看IP地址："
 ip a
 echo -n "请输入网卡设备号："
 read interface
-echo -n "请输入IP地址："
+echo -n "请输入IP地址并跟上子网掩码，如：192.168.0.1/24："
 read ip_address
 echo -n "请输入网关地址："
 read gateway_adress
