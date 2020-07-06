@@ -64,6 +64,14 @@ echo -e "\033[1;32m  安装lynx \033[0m"
 apt-get -y install lynx
 echo -e "\033[1;32m  安装ansible \033[0m"
 apt-get -y install ansible
+echo -e "\033[1;32m  安装rar \033[0m"
+apt-get -y install rar
+echo -e "\033[1;32m  安装jdk8 \033[0m"
+apt-get install openjdk-8-jre-headless
+echo -e "\033[1;32m  安装npm \033[0m"
+apt-get install npm
+echo -e "\033[1;32m  安装pv \033[0m"
+apt-get install pv
 
 # 设置SSH
 echo -e '\033[1;31m 关闭SSH DNS反向解析和GSSAPI的用户认证 \033[0m'
