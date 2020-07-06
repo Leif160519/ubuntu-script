@@ -67,11 +67,11 @@ apt-get -y install ansible
 echo -e "\033[1;32m  安装rar \033[0m"
 apt-get -y install rar
 echo -e "\033[1;32m  安装jdk8 \033[0m"
-apt-get install openjdk-8-jre-headless
+apt-get -y install openjdk-8-jre-headless
 echo -e "\033[1;32m  安装npm \033[0m"
-apt-get install npm
+apt-get -y install npm
 echo -e "\033[1;32m  安装pv \033[0m"
-apt-get install pv
+apt-get -y install pv
 
 # 设置SSH
 echo -e '\033[1;31m 关闭SSH DNS反向解析和GSSAPI的用户认证 \033[0m'
