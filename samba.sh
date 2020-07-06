@@ -27,7 +27,7 @@ systemctl restart smbd
 systemctl enable smbd
 
 browser_url="file://ip/${share_name}/"
-windows_url="\\\ip\${share_name}"
+windows_url="\\\ip\\${share_name}"
 
 echo "浏览器通过\"${browser_url}\",windows通过\"${windows_url}\"访问"
 
