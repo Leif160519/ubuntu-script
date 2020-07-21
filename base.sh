@@ -76,8 +76,7 @@ echo -e "\033[1;32m  安装lrzsz \033[0m"
 apt-get -y install lrzsz
 echo -e "\033[1;32m  安装monit \033[0m"
 apt-get -y install monit
-systemctl start monit
-systemctl enable monit
+systemctl start monit & systemctl enable monit
 
 # 设置SSH
 echo -e '\033[1;31m 关闭SSH DNS反向解析和GSSAPI的用户认证 \033[0m'
