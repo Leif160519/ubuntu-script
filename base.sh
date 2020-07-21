@@ -25,9 +25,9 @@ apt-get -y upgrade
 
 echo -e "\033[1;31m  安装常用软件 \033[0m"
 echo -e "\033[1;32m  安装openssh-server \033[0m"
-apt-get -y install openssh-server 
+apt-get -y install openssh-server
 echo -e "\033[1;32m  安装tree \033[0m"
-apt-get -y install tree 
+apt-get -y install tree
 echo -e "\033[1;32m  安装curl \033[0m"
 apt-get -y install curl
 echo -e "\033[1;32m  安装htop \033[0m"
@@ -41,19 +41,19 @@ apt-get -y install iftop
 echo -e "\033[1;32m  安装nethogs \033[0m"
 apt-get -y install nethogs
 echo -e "\033[1;32m  安装net-tools \033[0m"
-apt-get -y install net-tools 
+apt-get -y install net-tools
 echo -e "\033[1;32m  安装iostat \033[0m"
 apt-get -y install sysstat
 echo -e "\033[1;32m  安装fio \033[0m"
 apt-get -y install fio
 echo -e "\033[1;32m  安装fping \033[0m"
-apt-get -y install fping 
+apt-get -y install fping
 echo -e "\033[1;32m  安装iperf \033[0m"
 apt-get -y install iperf
 echo -e "\033[1;32m  安装screenfetch \033[0m"
-apt-get -y install screenfetch 
+apt-get -y install screenfetch
 echo -e "\033[1;32m  安装neofetch \033[0m"
-apt-get -y install neofetch 
+apt-get -y install neofetch
 echo -e "\033[1;32m  安装expect \033[0m"
 apt-get -y install expect
 echo -e "\033[1;32m  安装ntpdate \033[0m"
@@ -74,7 +74,10 @@ echo -e "\033[1;32m  安装pv \033[0m"
 apt-get -y install pv
 echo -e "\033[1;32m  安装lrzsz \033[0m"
 apt-get -y install lrzsz
-
+echo -e "\033[1;32m  安装monit \033[0m"
+apt-get -y install monit
+systemctl start monit
+systemctl enable monit
 
 # 设置SSH
 echo -e '\033[1;31m 关闭SSH DNS反向解析和GSSAPI的用户认证 \033[0m'
