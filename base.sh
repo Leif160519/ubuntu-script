@@ -77,6 +77,20 @@ apt-get -y install lrzsz
 echo -e "\033[1;32m  安装monit \033[0m"
 apt-get -y install monit
 systemctl start monit & systemctl enable monit
+echo -e "\033[1;32m  安装dstat \033[0m"
+apt-get -y install dstat
+echo -e "\033[1;32m  安装cacti \033[0m"
+apt-get -y install cacti
+echo -e "\033[1;32m  安装tmux \033[0m"
+apt-get -y install tmux
+echo -e "\033[1;32m  安装figlet \033[0m"
+apt-get -y install figlet
+echo -e "\033[1;32m  安装lsof \033[0m"
+apt-get -y install lsof
+echo -e "\033[1;32m  安装smartmountools \033[0m"
+apt-get -y install smartmountools
+echo -e "\033[1;32m  安装nmap \033[0m"
+apt-get -y install nmap
 
 # 设置SSH
 echo -e '\033[1;31m 关闭SSH DNS反向解析和GSSAPI的用户认证 \033[0m'
