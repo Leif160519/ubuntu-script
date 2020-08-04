@@ -62,3 +62,6 @@ ubuntu 配置有线固定IP地址
 
 ## 6.samba.sh
 安装samba文件共享（密码设置需与控制台交互）
+
+## 7.remove_gnome.sh
+卸载ubuntu自带的gnome桌面环境，非gnome桌面请不要运行此脚本！
