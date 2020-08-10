@@ -91,6 +91,9 @@ echo -e "\033[1;32m  安装smartmountools \033[0m"
 apt-get -y install smartmountools
 echo -e "\033[1;32m  安装nmap \033[0m"
 apt-get -y install nmap
+echo -e "\033[1;32m  安装vim \033[0m"
+apt-get -y install vim
+
 
 # 设置SSH
 echo -e '\033[1;31m 关闭SSH DNS反向解析和GSSAPI的用户认证 \033[0m'

@@ -34,6 +34,7 @@ ubuntu基础环境配置，安装必备组件和一些运维组件：
 | 23 | lrzsz | rz：运行该命令会弹出一个文件选择窗口，从本地选择文件上传到服务器(receive)，即windows上传到linux服务器;sz：将选定的文件发送（send）到本地机器，即从linux服务型下载到windows ||
 | 24 | monit | Monit是一款功能非常丰富的进程、文件、目录和设备的监测软件，适用于Linux/Unix平台。它可以自动修复那些已经停止运作的程序，特别适合处理那些由于多种原因导致的软件错误、监控系统关键的进程和资源。同时Monit 包含一个内嵌的 HTTP(S) Web 界面，你可以使用浏览器方便地查看 Monit 所监视的服务器。此外，M/Monit可以把多台安装Monit的服务器集中起来一起管理。| [Monit：开源服务器监控工具](https://www.cnblogs.com/52fhy/p/6412547.html) |
 | 25 | ntpdate | ntpdate命令是用来设置本地日期和时间。它从指定的每个服务器获得了一些样本，并应用标准 NTP 时钟过滤器和选择算法来选择最好的样本。 | [ntpdate命令](https://man.linuxde.net/ntpdate)|
+| 26 | vim | vi命令是UNIX操作系统和类UNIX操作系统中最通用的全屏幕纯文本编辑器。Linux中的vi编辑器叫vim，它是vi的增强版（vi Improved），与vi编辑器完全兼容，而且实现了很多增强功能。 | [vi命令](https://man.linuxde.net/vi) |
 
 其他软件及操作
 |  序号 |  软件/操作名称 |  作用 |
