@@ -1,3 +1,5 @@
+该项目后期将逐步减缓直至停止更新，脚本部署方式逐渐改为`ansible-playbook`的方式，新的项目地址：[ansible-linux](https://github.com/Leif160519/ansible-linux)
+
 # 注意事项
 ## 1.此脚本适用于Ubuntu 20.04（desktop或者live版本）。
 ## 2.部分脚本在运行过程中自带彩色字体输出，某些脚本执行一定步骤之后需要手动与控制台进行交互，并非无人值守，执行前请先阅读脚本内容。
