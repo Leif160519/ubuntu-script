@@ -3,11 +3,12 @@
 # 注意事项
 ## 1.此脚本适用于Ubuntu 20.04（desktop或者live版本）。
 ## 2.部分脚本在运行过程中自带彩色字体输出，某些脚本执行一定步骤之后需要手动与控制台进行交互，并非无人值守，执行前请先阅读脚本内容。
+## 3.部分脚本已经与ansible-linux项目中的playbook保持逻辑一致
 
 # 文件介绍
 
-## 1.base.sh
-ubuntu基础环境配置，安装必备组件和一些运维组件：
+## 1.install.sh
+ubuntu基础环境安装,包括常用组件和一些运维工具(以下表格内容不全)：
 
 | 序号 | 软件名称 | 说明 | 使用方法 |
 | --- | --- | --- | --- |
@@ -38,33 +39,44 @@ ubuntu基础环境配置，安装必备组件和一些运维组件：
 | 25 | ntpdate | ntpdate命令是用来设置本地日期和时间。它从指定的每个服务器获得了一些样本，并应用标准 NTP 时钟过滤器和选择算法来选择最好的样本。 | [ntpdate命令](https://man.linuxde.net/ntpdate)|
 | 26 | vim | vi命令是UNIX操作系统和类UNIX操作系统中最通用的全屏幕纯文本编辑器。Linux中的vi编辑器叫vim，它是vi的增强版（vi Improved），与vi编辑器完全兼容，而且实现了很多增强功能。 | [vi命令](https://man.linuxde.net/vi) |
 
-其他软件及操作
+## 2.config.sh
 |  序号 |  软件/操作名称 |  作用 |
 | --- | --- | --- |
 | 1 | 关闭swap分区 |  |
-| 2 | 屏蔽系统错误报告 |  |
-| 3 | screenfetch | 查看系统信息 |
-| 4 | neofetch | 查看系统信息 |
-| 5 | 关闭SSH DNS反向解析和GSSAPI的用户认证  | 防止ssh超时掉线 |
+| 2 | 关闭防火墙 |  |
+| 3 | 关闭SSH DNS反向解析和GSSAPI的用户认证  | 防止ssh超时掉线 |
+| 4 | 设置所有sudo指令不需要密码 |
+| 5 | 给pip换源 |
+| 6 | 配置vim |
+| 7 | 配置关机等待时间 |
 
 > 补充：[Linux 常用命令集合](https://www.runoob.com/w3cnote/linux-common-command.html)
 
-## 2.docker.sh
+## 3.docker.sh
 安装docker和docker-compose并更换成阿里源
 
-## 3. gitlab.sh
+## 4. gitlab.sh
 ubuntu安装gitlab，选择源安装是最新版，直接下载安装包是13.1.3版本
 
-## 4.network.sh
+## 5.network.sh
 ubuntu 配置有线固定IP地址
 
 > 注意：ubuntu从17.04开始抛弃`/etc/network/interfaces`方式设置固定IP地址（`debian`仍支持），采用`netplan`的方式设置。通常情况下，desktop和live版本的ubuntu都支持`netplan`方式，只不过desktop采用netplan设置之后，进入`设置-网络`中查看网络设置，显示的还是`dhcp`状态，而desktop版本还支持在`/etc/NetworkManager/system-connections/`路径下配置固定IP的方式（桌面版设置中手动点击设置的固定IP），而此方式live版不支持。
 
-## 5.nfs.sh
+## 6.nfs.sh
 安装nfs文件共享（默认无密码）
 
-## 6.samba.sh
+## 7.samba.sh
 安装samba文件共享（密码设置需与控制台交互）
 
-## 7.remove_gnome.sh
+## 8.remove_gnome.sh
 卸载ubuntu自带的gnome桌面环境，非gnome桌面请不要运行此脚本！
+
+## 9.remove_mysql.sh
+卸载`apt`安装的mysql，不适用于`mysql.sh`安装方式
+
+## 10.mysql.sh
+安装解压版的mysql 5.
+
+## 10.mysql.sh
+安装解压版的mysql 5.7.28

@@ -18,11 +18,11 @@ apt-get clean
 #重启生效
 function choose_reboot(){
     echo -n "是否重启？(y or n)"
-    read choice
-    if [ ${choice} == "y" ];then
+    read -r choice
+    if [ "${choice}" == "y" ];then
         echo "你选择了重启"
         reboot
-    elif [ ${choice} == "n" ];then
+    elif [ "${choice}" == "n" ];then
         echo "你选择了不重启"
     else
         echo "输入有误，请重新输入"
