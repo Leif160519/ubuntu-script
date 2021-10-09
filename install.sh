@@ -10,7 +10,8 @@ for software_name in rar unrar 7zip-full python-pip screenfetch neofetch linuxlo
     monit ntp bash-completion ctop ansible dosfstools uuid make colordiff subnetcalc groovy \
     python python3 python3-pip dos2unix nload curl cifs-utils xfsprogs exfat-utils rename \
     curlftpfs tig jq mosh axel cloc ccache neovim mc powerman ncdu glances pcp multitail \
-    figlet wdiff ;
+    figlet wdiff smartmontools ntpdate lsb fortune-mod ethtool lvm2 enca nload iptraf bmon \
+    slurm tcptrack vnstat bwm-ng ifstat collectl zstd moreutils nvme-cli unhide ;
 do
     echo -e "\033[1;32m 安装${software_name} \033[0m"
     apt-get -y install "${software_name}"
