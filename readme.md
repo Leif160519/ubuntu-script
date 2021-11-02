@@ -95,7 +95,7 @@ ubuntu 配置有线固定IP地址
 [12]: https://man.linuxde.net/iperf
 [13]: https://www.linuxprobe.com/figlet-toilet-command.html
 [14]: https://man.linuxde.net/lsof
-[15]: https://leif.fun/articles/2019/08/22/1566473324516.html
+[15]: https://github.icu/articles/2019/08/22/1566473324516.html
 [16]: https://blog.csdn.net/wz_cow/article/details/80967255
 [17]: https://man.linuxde.net/nmap
 [18]: https://blog.csdn.net/MrSate/article/details/53292102
